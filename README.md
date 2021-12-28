@@ -35,4 +35,20 @@ I would consider this project to have three phases.
 
 ### Phase 1
 The very first step is to download the Operating System (OS) to the SD card that will be pluged into the Raspberry Pi to do this you are going to want to download the raspberry pi installer from the **offical** Raspberry Pi website https://www.raspberrypi.com/software/
-once it is downloaded open it and choose **Raspberry Pi OS (32-bit)** for the OS and for storage choose the one option that is there and click write and wait for it to download. Once it had completed downloading, take out the SD card and plug it into the Raspberry Pi and everything else you need to plug in to make the Raspberry Pi functioning. Open the 
+once it is downloaded open it and choose **Raspberry Pi OS (32-bit)** for the OS and for storage choose the one option that is there and click write and wait for it to download. Once it had completed downloading, take out the SD card and plug it into the Raspberry Pi and everything else you need to plug in to make the Raspberry Pi functioning.
+ - Update the Raspberry Pi by entering **sudo apt-get update**
+ - Change password by opening the Raspberry pi terminal and typing and entering **passwd**
+ - Change the VNC or SSH to turn it on by entering sudo raspi-config and find **Interfacing Options** then turn on VNC or SSH
+ -  - I used this guide to set up VNC: https://www.instructables.com/Setting-up-a-VNC-Server-on-your-Raspberry-Pi/
+ - Now you are going to want to make your Raspberry Pi adress a static adress. to do this you are going to need three things
+  1. Raspberry Pi IP adress: use command **hostname -I**
+  2. Your Wifi Router IP adress: use command **ip r | grep default** (its the very first IP adress given)
+  3. Your current DNS IP adress: use command **sudo nano /etc/resolv.conf** (press **Control X** and press enter to exit the file)
+ - Now enter **sudo nano /etc/dhcpcd.conf** and input the following information that you found from the previous commands
+-----------------
+- interface NETWORK
+- static ip_address=STATIC_IP/24
+- static routers=ROUTER_IP
+- static domain_name_servers=DNS_IP
+----------------
+ - Once you have entered this into the file exit the file and enter **sudo reboot** to restart to make sure the changes are saved
