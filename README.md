@@ -27,7 +27,7 @@ Hello! I am making this repository because I am having to do it again to use a s
 
 
 I would consider this project to have three phases.
-### Phase 1 - download OS for Raspberry Pi (set up password/set up ssh/Create static IP adress)
+### Phase 1 - download OS for Raspberry Pi (set up password/set up VNC/Set up static IP adress)
 ### Phase 2 - download Pi hole (step by step for each downlaoding page)
 ### Phase 3 - Connect the Raspberry Pis DNS server to internet router
 
@@ -39,8 +39,9 @@ once it is downloaded open it and choose **Raspberry Pi OS (32-bit)** for the OS
  - Update the Raspberry Pi by entering **sudo apt-get update**
  - Change password by opening the Raspberry pi terminal and typing and entering **passwd**
  - Change the VNC or SSH to turn it on by entering sudo raspi-config and find **Interfacing Options** then turn on VNC or SSH
- -  - I used this guide to set up VNC: https://www.instructables.com/Setting-up-a-VNC-Server-on-your-Raspberry-Pi/
- - Now you are going to want to make your Raspberry Pi adress a static adress. to do this you are going to need three things
+  - Here is the hard way: https://www.instructables.com/Setting-up-a-VNC-Server-on-your-Raspberry-Pi/
+  - Here is the easy way: https://www.realvnc.com/en/connect/
+ - Now you are going to want to make your Raspberry Pi adress a static address. to do this you are going to need three things
   1. Raspberry Pi IP adress: use command **hostname -I**
   2. Your Wifi Router IP adress: use command **ip r | grep default** (its the very first IP adress given)
   3. Your current DNS IP adress: use command **sudo nano /etc/resolv.conf** (press **Control X** and press enter to exit the file)
