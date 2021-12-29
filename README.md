@@ -53,3 +53,6 @@ once it is downloaded open it and choose **Raspberry Pi OS (32-bit)** for the OS
 - static domain_name_servers=DNS_IP
 ----------------
  - Once you have entered this into the file exit the file and enter **sudo reboot** to restart to make sure the changes are saved
+
+Now you are finally ready to install pi hole.
+go to the official Pi hole webiste and select to downlaod pi hole on the raspberry pi.
