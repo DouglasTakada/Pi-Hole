@@ -57,3 +57,5 @@ Now you are finally ready to install pi hole.
 go to the official Pi hole webiste and select to downlaod pi hole on the raspberry pi.
 All you have left to do is follow the instructions and sign into the pi hole admin page!
 **One mistake I made was follow a outdated guide that said that you should not set the DNS server for your wifi router to WLAN and should only be set to LAN. But it turns out it no longer matters as internet connections have become very advanced since then.**
+
+douglas.takada@gmail.com
